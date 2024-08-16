@@ -1,0 +1,83 @@
+:root {
+    --primary-bg-color: cadetblue;
+    --nav-bg-color: black;
+    --text-bar-bg-color: antiquewhite;
+    --link-color: white;
+    --hover-bg-color: gray;
+    --text-bar-border-color: gray;
+    --link-padding: 10px;
+    --text-bar-padding: 10px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary-bg-color);
+}
+
+.whole_nav {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--nav-bg-color);
+    align-items: center;
+}
+
+.left-nav, .right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav {
+    justify-content: space-around;
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    padding: var(--link-padding);
+    display: inline-block; /* Ensures padding works effectively */
+}
+
+a:hover {
+    background-color: var(--hover-bg-color);
+    opacity: 0.5;
+}
+
+.text-bar {
+    font-size: 32px;
+    padding: var(--text-bar-padding);
+    margin-bottom: 50px;
+    background-color: var(--text-bar-bg-color);
+    border: 3px solid var(--text-bar-border-color);
+}
+
+.kaedin-image, .chieck-image, .bidan-image, .adam-image, .omar-image {
+    display: none; /* Hide all images initially */
+    margin: 10px;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+li {
+    width: fit-content;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: var(--hover-bg-color);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.show {
+    display: block; /* Display the image when `show` class is added */
+}
